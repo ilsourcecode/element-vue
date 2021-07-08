@@ -26,14 +26,19 @@ const routes = [
     component: () => import('../views/A.vue')
   },
   {
-    path: '/input',
-    name: 'Input',
-    component: () => import('../views/Input.vue')
+    path: '/radio',
+    name: 'Radio',
+    component: () => import('../views/Radio.vue')
   },
   {
     path: '/checkout',
     name: 'checkout',
     component: () => import('../views/Checkbox.vue')
+  },
+  {
+    path: '/input',
+    name: 'Input',
+    component: () => import('../views/Input.vue')
   }
 
 ]
