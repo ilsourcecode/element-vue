@@ -8,7 +8,6 @@
       <el-checkbox v-model="checkbox3">兴趣3</el-checkbox>
       <el-checkbox v-model="checkbox4" disabled>默认感兴趣的不可取消</el-checkbox>
     </template>
-
     <hr>
     <h5>-全选/反选</h5>
     <template>
