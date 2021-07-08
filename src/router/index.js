@@ -29,7 +29,13 @@ const routes = [
     path: '/input',
     name: 'Input',
     component: () => import('../views/Input.vue')
+  },
+  {
+    path: '/checkout',
+    name: 'checkout',
+    component: () => import('../views/Checkbox.vue')
   }
+
 ]
 
 const router = new VueRouter({

@@ -16,7 +16,9 @@
             <br>
             <router-link to="/a">A</router-link>
             <br>
-            <router-link to="/input">Input</router-link>
+            <router-link to="/input">Radio</router-link>
+            <br>
+            <router-link to="/checkout">Checkout</router-link>
             <br>
           </el-aside>
 
