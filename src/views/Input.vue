@@ -123,6 +123,34 @@
         <span class="addr">{{ item.address }}</span>
       </template>
     </el-autocomplete>
+
+    <hr>
+    <hr>
+    <hr>
+
+    能够限制输入内容的长度的文本输入框：
+    <!-- maxlength="10" 当前文本框限制的文本内容长度大小 -->
+    <div class="box">
+      <el-input
+              type="text"
+              placeholder="请输入内容"
+              v-model="text"
+              maxlength="10"
+              minlength="3"
+              show-word-limit
+      >
+      </el-input>
+    </div>
+    <div style="margin: 20px 0;"></div>
+    <el-input
+            type="textarea"
+            placeholder="请输入内容"
+            v-model="textarea"
+            maxlength="30"
+            show-word-limit
+    >
+    </el-input>
+
   </div>
 </template>
 
@@ -143,7 +171,9 @@
         restaurants: [],
         state1: '',
         state2: '',
-        state: ''
+        state: '',
+        text: '',
+        textarea: ''
       }
     },
     methods: {
@@ -224,27 +254,31 @@
 </script>
 
 <style scoped>
+  .box {
+    width: 200px;
+    height: 150px;
+  }
+
   .el-select {
     width: 100px
   }
 
-   .my-autocomplete {
-      li {
-        line-height: normal;
-        padding: 7px;
+  .addr {
+    font-size: 10px;
+    color: #b4b4b4;
+  }
 
-      .name {
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      .addr {
-        font-size: 12px;
-        color: #b4b4b4;
-      }
+  .name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 
-      .highlighted .addr {
-        color: #ddd;
-      }
+  .my-autocomplete i {
+    line-height: normal;
+    padding: 7px;
     }
+
+  .highlighted .addr {
+    color: #ddd;
   }
 </style>
