@@ -39,8 +39,12 @@ const routes = [
     path: '/input',
     name: 'Input',
     component: () => import('../views/Input.vue')
+  },
+  {
+    path: '/inputNumber',
+    name: 'InputNumber',
+    component: () => import('../views/InputNumber.vue')
   }
-
 ]
 
 const router = new VueRouter({

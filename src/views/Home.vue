@@ -83,23 +83,5 @@
 </script>
 
 <style>
-  .color-blue {
 
-  }
-
-  .el-header {
-    background: yellow;
-  }
-
-  .el-aside {
-    background: red;
-  }
-
-  .el-main {
-    background: greenyellow;
-  }
-
-  .el-footer {
-    background: #ff8198;
-  }
 </style>

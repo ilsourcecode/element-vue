@@ -22,6 +22,8 @@
             <br>
             <router-link to="/input">Input</router-link>
             <br>
+            <router-link to="/inputNumber">InputNumber</router-link>
+            <br>
           </el-aside>
 
           <el-main>
@@ -34,5 +36,19 @@
 </template>
 
 <style>
+  .el-header {
+    background: indianred;
+  }
 
+  .el-aside {
+    background: blanchedalmond;
+  }
+
+  .el-main {
+    background: chartreuse;
+  }
+
+  .el-footer {
+    background: #ff8198;
+  }
 </style>

@@ -127,6 +127,22 @@
     <hr>
     <hr>
     <hr>
+    <hr>
+    <h5>从服务器搜索，远程搜索：</h5>
+<!--    :hide-loading="true" 隐藏远程加载图标 -->
+    <!-- :fetch-suggestions="querySearchAsync" 服务器 resolve 成功后调用的方法 -->
+    <el-autocomplete
+            v-model="state"
+            :fetch-suggestions="querySearchAsync"
+            placeholder="请输入内容"
+            :hide-loading="false"
+            @select="handleSelect"
+            :highlight-first-item="true"
+    ></el-autocomplete>
+
+    <hr>
+    <hr>
+    <hr>
 
     能够限制输入内容的长度的文本输入框：
     <!-- maxlength="10" 当前文本框限制的文本内容长度大小 -->
@@ -151,6 +167,28 @@
     >
     </el-input>
 
+    <h5>输入框：</h5>
+    <!--
+      prefix-icon="el-icon-search"    前置 icon
+      show-password="true"  密码格式显示
+      v-model="inputText"   当前 input 输入框的值与 inputText 变量绑定
+      show-word-limit="false"  是否显示字数
+      clearable    清空操作
+    -->
+    <el-input type="text"
+              prefix-icon="el-icon-search"
+              v-model="inputText"
+              autocomplete="on"
+              clearable
+              placeholder="请输入内容"
+              @clear="onClear"
+              @input="oninputEvent"
+              @change="onChange"
+              @focus="onFocus"
+              @blur="onBlur"
+              @select="onSelect"
+    ></el-input>
+
   </div>
 </template>
 
@@ -173,7 +211,9 @@
         state2: '',
         state: '',
         text: '',
-        textarea: ''
+        textarea: '',
+        timeout:  null,
+        inputText: ''
       }
     },
     methods: {
@@ -182,6 +222,15 @@
         var results = queryString ? restaurants.filter(this.createFilter(queryString)) : restaurants;
         // 调用 callback 返回建议列表的数据
         cb(results);
+      },
+      querySearchAsync(queryString, cb) {
+        var restaurants = this.restaurants;
+        var results = queryString ? restaurants.filter(this.createStateFilter(queryString)) : restaurants;
+
+        clearTimeout(this.timeout);
+        this.timeout = setTimeout(() => {
+          cb(results);
+        }, 3000 * Math.random());
       },
       createFilter(queryString) {
         return (restaurant) => {
@@ -245,6 +294,24 @@
       },
       handleIconClick(ev) {
         console.log(ev);
+      },
+      onFocus() {
+        console.log("获焦!")
+      },
+      onBlur() {
+        console.log("失焦!")
+      },
+      oninputEvent() {
+        console.log("input 值发生改变出发");
+      },
+      onClear() {
+        console.log('clearable 清空之后触发的时间');
+      },
+      onChange() {
+        console.log('值改变事件');
+      },
+      onSelect() {
+        console.log("select is run!");
       }
     },
     mounted() {
@@ -276,7 +343,7 @@
   .my-autocomplete i {
     line-height: normal;
     padding: 7px;
-    }
+  }
 
   .highlighted .addr {
     color: #ddd;
