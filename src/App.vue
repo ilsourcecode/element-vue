@@ -24,6 +24,8 @@
             <br>
             <router-link to="/inputNumber">InputNumber</router-link>
             <br>
+            <router-link to="/select">Select</router-link>
+            <br>
           </el-aside>
 
           <el-main>

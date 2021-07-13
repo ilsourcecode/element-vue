@@ -16,7 +16,7 @@
         :step="0.001" 步长
         size="medium" 设置尺寸 small mini
       -->
-      <el-input-number v-model="num1" size="medium" controls-position="right" :precision="3" :step="0.001" :max="10"></el-input-number>
+      <el-input-number :controls="true" v-model="num1" size="medium" controls-position="right" :precision="3" :step="0.001" :max="10"></el-input-number>
     </template>
   </div>
 </template>

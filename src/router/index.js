@@ -44,6 +44,11 @@ const routes = [
     path: '/inputNumber',
     name: 'InputNumber',
     component: () => import('../views/InputNumber.vue')
+  },
+  {
+    path: '/select',
+    name: 'Select',
+    component: () => import('../views/Select.vue')
   }
 ]
 
