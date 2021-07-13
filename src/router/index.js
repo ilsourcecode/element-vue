@@ -48,7 +48,21 @@ const routes = [
   {
     path: '/select',
     name: 'Select',
-    component: () => import('../views/Select.vue')
+    component: () => import('../views/Select.vue'),
+    children:[
+      {
+        path: '/',
+        redirect: 'a'
+      },
+      {
+        path: 'a',
+        component: () => import('../views/SelectA.vue')
+      },
+      {
+        path: 'b',
+        component: () => import('../views/SelectB.vue')
+      }
+    ]
   }
 ]
 
