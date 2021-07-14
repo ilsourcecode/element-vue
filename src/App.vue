@@ -26,6 +26,8 @@
             <br>
             <router-link to="/select">Select</router-link>
             <br>
+            <router-link to="/switch">Switch</router-link>
+            <br>
           </el-aside>
 
           <el-main>
