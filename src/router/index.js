@@ -73,6 +73,11 @@ const routes = [
     path: '/slider',
     name: 'Slider',
     component: () => import('../views/Slider.vue')
+  },
+  {
+    path: '/timePicker',
+    name: 'TimePicker',
+    component: () => import('../views/TimePicker.vue')
   }
 ]
 
