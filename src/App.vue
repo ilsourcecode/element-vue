@@ -28,6 +28,8 @@
             <br>
             <router-link to="/switch">Switch</router-link>
             <br>
+            <router-link to="/slider">Slider</router-link>
+            <br>
           </el-aside>
 
           <el-main>
