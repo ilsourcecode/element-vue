@@ -32,6 +32,8 @@
             <br>
             <router-link to="/timePicker">TimePicker</router-link>
             <br>
+            <router-link to="/datePicker">DatePicker</router-link>
+            <br>
           </el-aside>
 
           <el-main>

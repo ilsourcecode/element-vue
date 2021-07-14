@@ -31,7 +31,6 @@
     <br>
     <span>规定范围内选择：</span>
     <el-time-picker
-
             v-model="value1"
             :picker-options="{
               selectableRange: '00:00:00 - 23:59:59'
