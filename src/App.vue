@@ -36,6 +36,8 @@
             <br>
             <router-link to="/dateTimePicker">DateTimePicker</router-link>
             <br>
+            <router-link to="/upload">Upload</router-link>
+            <br>
           </el-aside>
 
           <el-main>
