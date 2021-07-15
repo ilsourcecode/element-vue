@@ -83,6 +83,11 @@ const routes = [
     path: '/datePicker',
     name: 'DatePicker',
     component: () => import('../views/DatePicker.vue')
+  },
+  {
+    path: '/dateTimePicker',
+    name: 'DateTimePicker',
+    component: () => import('../views/DateTimePicker.vue')
   }
 ]
 
