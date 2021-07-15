@@ -38,6 +38,8 @@
             <br>
             <router-link to="/upload">Upload</router-link>
             <br>
+            <router-link to="/rate">Rate</router-link>
+            <br>
           </el-aside>
 
           <el-main>
@@ -56,10 +58,6 @@
 
   .el-aside {
     background: blanchedalmond;
-  }
-
-  .el-main {
-    background: chartreuse;
   }
 
   .el-footer {
