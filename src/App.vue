@@ -40,6 +40,8 @@
             <br>
             <router-link to="/rate">Rate</router-link>
             <br>
+            <router-link to="/colorPicker">ColorPicker</router-link>
+            <br>
           </el-aside>
 
           <el-main>

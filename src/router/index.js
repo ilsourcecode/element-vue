@@ -98,6 +98,11 @@ const routes = [
     path: '/rate',
     name: 'Rate',
     component: () => import('../views/Rate.vue')
+  },
+  {
+    path: '/colorPicker',
+    name: 'ColorPicker',
+    component: () => import('../views/ColorPicker.vue')
   }
 ]
 
