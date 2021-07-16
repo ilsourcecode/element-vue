@@ -42,6 +42,8 @@
             <br>
             <router-link to="/colorPicker">ColorPicker</router-link>
             <br>
+            <router-link to="/transfer">Transfer</router-link>
+            <br>
           </el-aside>
 
           <el-main>

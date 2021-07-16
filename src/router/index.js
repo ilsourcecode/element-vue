@@ -103,6 +103,11 @@ const routes = [
     path: '/colorPicker',
     name: 'ColorPicker',
     component: () => import('../views/ColorPicker.vue')
+  },
+  {
+    path: '/transfer',
+    name: 'Transfer',
+    component: () => import('../views/Transfer.vue')
   }
 ]
 
